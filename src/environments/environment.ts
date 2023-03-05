@@ -11,8 +11,7 @@ const firebaseConfig = {
   authDomain: "lavalanche-ee986.firebaseapp.com",
   projectId: "lavalanche-ee986",
   storageBucket: "lavalanche-ee986.appspot.com",
-  messagingSenderId: "1088594733736",
-  appId: "1:1088594733736:web:932374e4391f0d06c1309d",
+  messagingSenderId: "1088594733736",  appId: "1:1088594733736:web:932374e4391f0d06c1309d",
   measurementId: "G-C84R4G3W5J"
 };
 

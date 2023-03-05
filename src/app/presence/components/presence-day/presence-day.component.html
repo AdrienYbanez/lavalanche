@@ -1,1 +1,22 @@
-<p>presence-day works!</p>
+<ng-template></ng-template>
+
+<div class="day-card">
+  <div class="day-number">{{dayNumber}}</div>
+  <div class="days-row">
+    <app-presence-row
+      [author]="'Philippe'"
+      [nrbPersons]="1"
+      [dayStyle]="'#E8563F'"
+    ></app-presence-row>
+    <app-presence-row
+      [author]="'Pauline'"
+      [nrbPersons]="1"
+      [dayStyle]="'#8AC054'"
+    ></app-presence-row>
+    <app-presence-row
+      [author]="'Pauline'"
+      [nrbPersons]="1"
+      [dayStyle]="'#8AC054'"
+    ></app-presence-row>
+  </div>
+</div>

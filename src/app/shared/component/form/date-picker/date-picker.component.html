@@ -1,0 +1,10 @@
+<form class="full-width" [formGroup]="form">
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>{{ label }}</mat-label>
+    <input (click)="picker.open()" [formControl]="control" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+</form>
+
+

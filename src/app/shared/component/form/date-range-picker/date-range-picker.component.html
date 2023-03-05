@@ -1,0 +1,13 @@
+<form class="full-width" [formGroup]="form">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>{{ label }}</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Début" [formControl]="controlStart">
+      <input matEndDate placeholder="Fin" [formControl]="controlEnd">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+  </mat-form-field>
+</form>
+
+

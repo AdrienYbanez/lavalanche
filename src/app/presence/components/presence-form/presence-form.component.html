@@ -1,1 +1,41 @@
-<p>presence-form works!</p>
+<form class="creation-presence-form" [formGroup]="creationPresenceForm">
+  <div class="form-card">
+    <div class="form-title">Nouveau séjour</div>
+    <div class="container-controls">
+      <app-date-range-picker
+        [controlStart]="dateStart"
+        [controlEnd]="dateEnd"
+        [label]="'Dates de séjour'"
+        [form]="creationPresenceForm"
+      ></app-date-range-picker>
+      <app-input-full-width
+        [control]="nbrAdults"
+        [form]="creationPresenceForm"
+        [label]="'Nombre d\'adultes'"
+        [type]="'number'"
+      ></app-input-full-width>
+      <app-input-full-width
+        [control]="nbrChildren"
+        [form]="creationPresenceForm"
+        [label]="'Nombre d\'enfants'"
+        [type]="'number'"
+      ></app-input-full-width>
+      <app-textarea
+        [control]="comment"
+        [form]="creationPresenceForm"
+        [label]="'Commentaire'"
+      ></app-textarea>
+    </div>
+    <div class="action-block">
+      <app-raised-button
+        [label]="'Annuler'"
+        [class]="'danger'"
+      ></app-raised-button>
+      <app-raised-button
+        [label]="'Valider'"
+        [class]="'success'"
+      ></app-raised-button>
+    </div>
+
+  </div>
+</form>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-presence-month',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./presence-month.component.scss']
 })
 export class PresenceMonthComponent {
+  @Input() monthName: string = 'Nom du moi'
 
 }

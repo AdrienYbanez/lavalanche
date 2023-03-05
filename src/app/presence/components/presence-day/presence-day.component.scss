@@ -1,0 +1,18 @@
+@import '../../../../assets/scss/main';
+
+
+.day-card {
+  border: 1px solid $color-lightgray-light;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  position: relative;
+  .day-number {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4px;
+    box-sizing: border-box;
+  }
+}

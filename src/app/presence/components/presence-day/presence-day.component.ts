@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-presence-day',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./presence-day.component.scss']
 })
 export class PresenceDayComponent {
+  @Input() dayNumber: number = 1;
 
 }

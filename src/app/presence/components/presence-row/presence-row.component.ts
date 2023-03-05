@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-presence-row',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./presence-row.component.scss']
 })
 export class PresenceRowComponent {
+  @Input() author: string = 'Adrien';
+  @Input() nrbPersons: number = 2;
+  @Input() dayStyle: string = '#E8563F';
 
 }

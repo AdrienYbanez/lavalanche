@@ -1,0 +1,30 @@
+@import '../../../../assets/scss/main';
+
+.card-month {
+  height: 45vw;
+  width: 45vw;
+  box-shadow: $shadow-primary;
+  background-color: $color-lightgray-light;
+  padding: 16px;
+  box-sizing: border-box;
+  .month-name {
+    font-size: 1.2rem;
+  }
+  .days-name {
+    padding: 8px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .day-name {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .days-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 90%;
+    background-color: $color-lightgray-medium;
+  }
+}
