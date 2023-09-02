@@ -8,6 +8,10 @@ import {SharedModule} from "./shared/shared.module";
 import {MAT_DATE_FORMATS, MAT_DATE_LOCALE} from "@angular/material/core";
 import {MY_FORMAT} from "./shared/environment/date-format";
 
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {environment} from "../environments/environment";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,9 @@ import {MY_FORMAT} from "./shared/environment/date-format";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},

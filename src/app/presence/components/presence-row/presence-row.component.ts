@@ -9,5 +9,6 @@ export class PresenceRowComponent {
   @Input() author: string = 'Adrien';
   @Input() nrbPersons: number = 2;
   @Input() dayStyle: string = '#E8563F';
+  @Input() comment: string = 'Un exemple de commentaire'
 
 }

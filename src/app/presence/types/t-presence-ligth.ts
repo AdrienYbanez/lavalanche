@@ -1,7 +1,8 @@
 export type TPresenceLigth = {
   authorName: string;
-  personNbr: number;
+  nbrAdults: number;
+  nbrChildren: number;
   comment: string;
   color: string;
-  presenceId: string;
+  presenceId: number;
 };

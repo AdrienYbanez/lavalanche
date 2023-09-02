@@ -8,13 +8,8 @@ import { PresenceFormComponent } from './components/presence-form/presence-form.
 import { PresenceDetailComponent } from './components/presence-detail/presence-detail.component';
 import {PresenceRoutingModule} from "./presence-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from "@angular/material/core";
-import {MatInputModule} from "@angular/material/input";
 import {SharedModule} from "../shared/shared.module";
 import {MatTooltipModule} from "@angular/material/tooltip";
-
 
 @NgModule({
   declarations: [

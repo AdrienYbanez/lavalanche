@@ -1,8 +1,8 @@
 export type TPresence = {
-  dateStart: string;
-  dateEnd: string;
-  personNbr: number;
-  authorId: number;
+  authorId: string;
   comment: string;
+  dateEnd: string;
+  dateStart: string;
   eventId?: number;
+  personNbr: number;
 };

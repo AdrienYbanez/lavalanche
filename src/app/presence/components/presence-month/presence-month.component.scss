@@ -1,7 +1,7 @@
 @import '../../../../assets/scss/main';
 
 .card-month {
-  height: 45vw;
+  height: auto;
   width: 45vw;
   box-shadow: $shadow-primary;
   background-color: $color-lightgray-light;
@@ -17,7 +17,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     .day-name {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      box-sizing: border-box;
     }
   }
   .days-card {

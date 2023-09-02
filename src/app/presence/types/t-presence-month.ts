@@ -1,6 +1,7 @@
 import {TPresenceDay} from "./t-presence-day";
 
 export type TPresenceMonth = {
-  date: string;
+  monthName: string;
+  year: number;
   days: TPresenceDay[];
 };
