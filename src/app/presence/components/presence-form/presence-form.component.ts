@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {TCreationPresenceForm} from "./types/t-creation-presence-form";
+import {PresenceService} from "../../services/presence.service";
 
 @Component({
   selector: 'app-presence-form',
@@ -9,7 +10,7 @@ import {TCreationPresenceForm} from "./types/t-creation-presence-form";
 })
 export class PresenceFormComponent implements OnInit{
   public creationPresenceForm: FormGroup = new FormGroup<TCreationPresenceForm>({
-    authorId: new FormControl(1, Validators.required),
+    authorId: new FormControl('Adrien', Validators.required),
     comment: new FormControl('', Validators.required),
     dateEnd: new FormControl(null, Validators.required),
     dateStart: new FormControl(null, Validators.required),
@@ -17,6 +18,11 @@ export class PresenceFormComponent implements OnInit{
     nbrAdults: new FormControl(null, Validators.required),
     nbrChildren: new FormControl(null, Validators.required)
   })
+
+  constructor(
+    private readonly presenceService: PresenceService
+  ) {
+  }
 
   public get dateStart() {
     return this.creationPresenceForm.get('dateStart') as FormControl;
@@ -34,8 +40,24 @@ export class PresenceFormComponent implements OnInit{
     return this.creationPresenceForm.get('comment') as FormControl;
   }
 
-  ngOnInit() {
-    this.creationPresenceForm.valueChanges.subscribe(x => console.log('value changes : ', x))
+  public cancel(){
+    this.creationPresenceForm.reset();
   }
+
+  public submitForm() {
+    console.warn('le form : ', this.creationPresenceForm);
+    if(this.creationPresenceForm.valid) {
+      this.presenceService.createPresence(this.creationPresenceForm.value)
+    } else {
+      console.warn('B')
+      this.creationPresenceForm.markAllAsTouched();
+      this.creationPresenceForm.updateValueAndValidity();
+    }
+  }
+
+  ngOnInit() {
+  }
+
+
 
 }

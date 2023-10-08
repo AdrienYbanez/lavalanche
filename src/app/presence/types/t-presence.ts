@@ -1,8 +1,10 @@
 export type TPresence = {
+  id: string;
   authorId: string;
   comment: string;
-  dateEnd: string;
-  dateStart: string;
+  dateEnd: any;
+  dateStart: any;
   eventId?: number;
-  personNbr: number;
+  nbrAdults: number;
+  nbrChildren: number;
 };

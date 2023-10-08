@@ -11,6 +11,7 @@ import {MY_FORMAT} from "./shared/environment/date-format";
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {environment} from "../environments/environment";
+import {LuxonModule} from "luxon-angular";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {environment} from "../environments/environment";
     SharedModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    // LuxonModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},

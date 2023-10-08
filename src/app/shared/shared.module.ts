@@ -14,6 +14,7 @@ import { InputFullWidthComponent } from './component/form/input-full-width/input
 import { TextareaComponent } from './component/form/textarea/textarea.component';
 import { RaisedButtonComponent } from './component/button/raised-button/raised-button.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { BaseComponent } from './component/base/base.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     DatePickerComponent,
     InputFullWidthComponent,
     TextareaComponent,
-    RaisedButtonComponent
+    RaisedButtonComponent,
+    BaseComponent
   ],
   imports: [
     CommonModule,

@@ -30,10 +30,12 @@
       <app-raised-button
         [label]="'Annuler'"
         [class]="'danger'"
+        (click)="cancel()"
       ></app-raised-button>
       <app-raised-button
         [label]="'Valider'"
         [class]="'success'"
+        (click)="submitForm()"
       ></app-raised-button>
     </div>
 
