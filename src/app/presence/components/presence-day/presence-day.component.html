@@ -1,0 +1,16 @@
+<ng-template></ng-template>
+
+<div class="day-card">
+  <div class="day-number">{{dayNumber}}</div>
+  <div class="days-row" *ngFor="let presence of presences">
+    <app-presence-row
+      [author]="presence.authorName"
+      [dayStyle]="presence.color"
+      [comment]="presence.comment"
+    ></app-presence-row>
+  </div>
+  <div class="days-persons-nbr">
+    <div class="nbr-children" *ngIf="nbrChildren > 0">{{nbrChildren}} enfants</div>
+    <div class="nbr-adults" *ngIf="nbrAdults > 0">{{nbrAdults}} adultes</div>
+  </div>
+</div>

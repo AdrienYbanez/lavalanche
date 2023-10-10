@@ -1,0 +1,15 @@
+<nav>
+  <div class="application-name">Lavalanche</div>
+  <div class="nav-items">
+    <div class="nav-item" [routerLink]="['/presence']" routerLinkActive="is-activ">Presence</div>
+    <div class="nav-item" [routerLink]="['/utilisateurs']">Utilisateurs</div>
+    <div class="nav-item" [routerLink]="['/lieus']">Lieus</div>
+    <div class="nav-item" [routerLink]="['/entretients']">Entretiens</div>
+  </div>
+  <div class="logout">
+    <app-raised-button
+      [label]="'Déconnexion'"
+      [class]="'primary'"
+    ></app-raised-button>
+  </div>
+</nav>
