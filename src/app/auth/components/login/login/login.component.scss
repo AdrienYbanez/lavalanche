@@ -1,0 +1,70 @@
+@import '../../../../../assets/scss/main';
+
+.container-login {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-content {
+    height: 500px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+      "title title"
+      "illustration form"
+    ;
+
+    &-title {
+      grid-area: title;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        color: $color-primary;
+        font-size: 6rem;
+        font-family: allura;
+      }
+    }
+
+    &-illustration {
+      grid-area: illustration;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      div {
+        width: 100%;
+      }
+    }
+
+    &-form {
+      grid-area: form;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      form {
+        width: 60%;
+      }
+      &-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-error {
+        margin-top: 16px;
+        color: $color-danger-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="container-login">
+  <div class="login-content">
+    <div class="login-content-title">
+      <h1>Lavalanche</h1>
+    </div>
+    <div class="login-content-illustration">
+      <div>
+        <app-login-illustration></app-login-illustration>
+      </div>
+    </div>
+    <div class="login-content-form">
+      <form [formGroup]="loginForm">
+        <p>
+          <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email" required>
+            <mat-error *ngIf="emailControl.invalid">Ce champ est invalide</mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="full-width">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput formControlName="password" required>
+            <mat-error *ngIf="passwordControl.invalid">Ce champ est invalide</mat-error>
+          </mat-form-field>
+        </p>
+        <button *ngIf="!isLoading" (click)="submitForm()" class="full-width" mat-raised-button color="primary">Valider</button>
+        <div class="login-content-form-spinner" *ngIf="isLoading">
+          <mat-spinner [diameter]="30"></mat-spinner>
+        </div>
+        <div *ngIf="errorMessage" class="login-content-form-error">{{errorMessage}}</div>
+      </form>
+    </div>
+  </div>
+</div>
