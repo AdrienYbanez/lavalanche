@@ -54,4 +54,9 @@ $color-darkgray-medium: #646C77;
 $color-darkgray-light: #A9B1BC;
 
 $shadow-main: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
-$shadow-primary: 0 1px 2px 0 rgb(103 58 183 / 30%), 0 1px 3px 1px rgb(103 58 183 / 15%)
+$shadow-primary: 0 1px 2px 0 rgb(103 58 183 / 30%), 0 1px 3px 1px rgb(103 58 183 / 15%);
+
+@font-face {
+  font-family: 'allura';
+  src: url("../fonts/Allura-Regular.ttf") format("truetype");
+}

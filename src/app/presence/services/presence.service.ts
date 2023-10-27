@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {addDoc, collection, collectionData, Firestore, where} from "@angular/fire/firestore";
+import {addDoc, collection, collectionData, Firestore} from "@angular/fire/firestore";
 import {TPresenceCreation} from "../types/t-presence-creation";
 import {catchError, tap} from "rxjs";
 import {TPresenceDto} from "../types/t-presence-dto";
@@ -19,10 +19,10 @@ export class PresenceService {
   public loadPresences() {
     return collectionData(this.presencesCollection, {idField:'id'})
       .pipe(
-        tap(presencesDto => {
+        tap((presencesDto: any) => {
           if(presencesDto.length > 0) {
             const presences: TPresence[] = [];
-            presencesDto.forEach(presenceDto => {
+            presencesDto.forEach((presenceDto: any) => {
               console.warn('PresenceDto : ', presenceDto);
               console.warn('Presence : ', transformTPresenceDtoToTPresence(presenceDto as TPresenceDto));
             })
@@ -34,10 +34,10 @@ export class PresenceService {
 
   public createPresence(newPresence: TPresenceCreation) {
     return addDoc(this.presencesCollection, <TPresenceCreation> newPresence)
-      .then(rep => {
+      .then((rep: any) => {
         console.warn('reponse de creation : ', rep);
       })
-      .catch(err => {
+      .catch((err: any) => {
         console.error('une erreur est survenur lors de la creation de la presence : ', err)
       })
   }

@@ -15,6 +15,8 @@ import { TextareaComponent } from './component/form/textarea/textarea.component'
 import { RaisedButtonComponent } from './component/button/raised-button/raised-button.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { BaseComponent } from './component/base/base.component';
+import { LoginIllustrationComponent } from './component/illustrations/login-illustration/login-illustration.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -24,18 +26,20 @@ import { BaseComponent } from './component/base/base.component';
     InputFullWidthComponent,
     TextareaComponent,
     RaisedButtonComponent,
-    BaseComponent
+    BaseComponent,
+    LoginIllustrationComponent
   ],
   imports: [
     CommonModule,
-    MatButtonModule,
     RouterModule,
+    ReactiveFormsModule,
+    MatButtonModule,
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    ReactiveFormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     HeaderComponent,
@@ -43,7 +47,15 @@ import { BaseComponent } from './component/base/base.component';
     DatePickerComponent,
     InputFullWidthComponent,
     TextareaComponent,
-    RaisedButtonComponent
+    RaisedButtonComponent,
+    LoginIllustrationComponent,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ]
 })
 export class SharedModule { }

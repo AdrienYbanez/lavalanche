@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "lavalanche-ee986"
+  },
+  "targets": {
+    "lavalanche-ee986": {
+      "hosting": {
+        "Lavalanche": [
+          "lavalanche-ee986"
+        ]
+      }
+    }
   }
 }
